@@ -19,8 +19,8 @@ else:
 server = 'smtp.gmail.com'
 port = 587
 
-sender = 'log2av@gmail.com'
-recipient = 'abhishek.verma@laitkor.com'
+sender = 'myemail@gmail.com'
+recipient = 'hisemail@laitkor.com'
 subject = 'Change of Password'
 body = 'New Password for user ' + user1 + ' is ' + pass1 
  
@@ -40,7 +40,7 @@ session = smtplib.SMTP(server, port)
 session.ehlo()
 session.starttls()
 session.ehlo
-session.login(sender, 'mail..25846+')
+session.login(sender, 'yourpassword')
  
 session.sendmail(sender, recipient, headers + "\r\n\r\n" + body)
 session.quit()
