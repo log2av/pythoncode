@@ -20,20 +20,20 @@ f = open('sites.txt')
 text1 = f.read()
 f.close()
 
-print(text1) 
+#print(text1) 
 
 websites = re.findall(r'(\S+[.]com)', text1)
-print(websites)
+#print(websites)
 data = ', '.join(websites)
-print(data)
+#print(data)
 data1 = data.replace(",", "")
-print(data1)
+#print(data1)
 
 words = data1.split()
 for word in words:
     url = 'http://' + word + doda
     print(url)
     webbrowser.open(url)
-s = input('Press any key to continue...')
+#s = input('Press any key to continue...')
 
 
