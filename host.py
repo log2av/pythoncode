@@ -1,7 +1,7 @@
 import os
 
 domain = input('Enter the name of domain ')
-vm = input('Enter the name of VM   1.105  2.184  3.103 ') 
+vm = input('Enter the name of VM    1.105  2.184  3.103 ') 
 
 if vm == '1':
     ip='192.168.1.105'
