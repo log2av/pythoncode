@@ -26,7 +26,7 @@ session = smtplib.SMTP(server, port)
 session.ehlo()
 session.starttls()
 session.ehlo
-session.login(sender, 'mail..25846+')
+session.login(sender, 'password_mail')
  
 session.sendmail(sender, recipient, headers + "\r\n\r\n" + body)
 session.quit()
