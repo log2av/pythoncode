@@ -1,6 +1,7 @@
 import subprocess
 import fileinput
 import sys
+import os
 
 date = raw_input('Enter the date in format YYYYMMDD ')
 open('top10.txt', 'w').close()
@@ -11,3 +12,4 @@ for line in fileinput.input('top10.txt', inplace=True):
 	#line = prefix + ' ' + line + ' ' + suffix + '\n'
 	sys.stdout.write(line)
 subprocess.call(['notepad.exe', 'top10.txt'])
+os.remove('top10.txt')
