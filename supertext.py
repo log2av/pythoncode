@@ -1,11 +1,7 @@
 import subprocess
 import fileinput
 import sys
-
-
-
-
-
+import os
 open('file.txt', 'w').close()
 subprocess.call(['notepad.exe', 'file.txt'])
 for line in fileinput.input('file.txt', inplace=True):
@@ -27,3 +23,4 @@ for line in fileinput.input('file.txt', inplace=True):
 
     sys.stdout.write(line)
 subprocess.call(['notepad.exe', 'file.txt'])
+os.remove('file.txt')
