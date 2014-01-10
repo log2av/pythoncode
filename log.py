@@ -1,14 +1,22 @@
-import os
-from collections import Counter
-f = open('log.txt')
-line = f.readlines()
-print line
-f.close()
-a = Counter(line)
-print a
-no_exist = line.count(======== MOBILITY EVENT (G): ATTACH REJECT =========\n)
-print 'The records are: ' + no_exist
-#for index, word in enumerate(line):
-	#print index, word
-#words = line.split()
-#print words
+import itertools
+from itertools import izip
+good_words = ['IMSI', 'RA New']
+
+with open('log.txt') as oldfile, open('lognew.txt', 'w') as newfile:
+    for line in oldfile:
+        if any(word in line for word in good_words):
+            newfile.write(line)
+with open('num.txt', 'r') as f:
+    for line1, line2, line3 in izip(f, f, f):
+        print line1.rstrip('\n') + ' ' + line2.rstrip('\n') + ' ' + line3
+			
+			
+#with open('lognew.txt', 'r') as f:
+#	firstlines = itertools.islice(f, 0, None, 1)
+#	secondlines = itertools.islice(f, 0, None, 2)
+#	for line1 in firstlines :
+#		print line1
+#	for line2 in secondlines :
+#		print line2
+#	for (line1 in firstlines) and (line2 in secondlines):
+#		print line1 + line2 
