@@ -3,7 +3,7 @@ import fileinput
 import sys
 import os
 
-date = raw_input('Enter the date in format YYYYMMDD ')
+date = input('Enter the date in format YYYYMMDD ')
 open('top10.txt', 'w').close()
 subprocess.call(['notepad.exe', 'top10.txt'])
 for line in fileinput.input('top10.txt', inplace=True):
