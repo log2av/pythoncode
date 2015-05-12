@@ -1,0 +1,8 @@
+with open('query.txt', 'w') as f:
+    for x in range(1,31):
+        f.write('ALTER TABLE CRESTELMEDIATIONPRD501.TBLMEDIATIONCDR DROP PARTITION PSNBRCDR_' + str(x).zfill(2) + 'JUN2013 UPDATE GLOBAL INDEXES; \n')
+        f.write('DROP TABLESPACE TSNBRCDR_' + str(x).zfill(2) + 'JUN2013 INCLUDING CONTENTS AND DATAFILES; \n')
+    for x in range(1,32):
+        f.write('ALTER TABLE CRESTELMEDIATIONPRD501.TBLMEDIATIONCDR DROP PARTITION PSNBRCDR_' + str(x).zfill(2) + 'JUL2013 UPDATE GLOBAL INDEXES; \n')
+        f.write('DROP TABLESPACE TSNBRCDR_' + str(x).zfill(2) + 'JUL2013 INCLUDING CONTENTS AND DATAFILES; \n')
+f.close()
