@@ -1,6 +1,6 @@
 import cx_Oracle
 
-conn_str = u'crestelmediationprd501/crestelmediationprd501@10.171.17.87/CGFLUC'
+conn_str = u'abhishek/abhishek@10.172.171.66/CGFLUC'
 con = cx_Oracle.connect(conn_str)
 #print con.version
 c = con.cursor()
